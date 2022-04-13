@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 import { Buttons } from "../ui/Buttons";
 import { HorarioHud } from "../ui/HorarioHud";
 import { SocialLogos } from "../ui/SocialLogos";
-import { Info, SignIn } from "phosphor-react";
+import { Info } from "phosphor-react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 
@@ -43,14 +43,16 @@ const Home: NextPage = () => {
         {!session && (
           <div>
             Sem Sessao <br />
-            <button onClick={() => SignIn}>Sign In</button>
+            <button className="bg-gray-800" onClick={signIn}>
+              Sign In
+            </button>
           </div>
         )}
         {session && (
           <div>
             Logado com {session.user?.email} <br />
             UwU <br />
-            <button onClick={() => signOut}>Sair</button>
+            <button onClick={signOut}>Sair</button>
           </div>
         )}
       </div>
