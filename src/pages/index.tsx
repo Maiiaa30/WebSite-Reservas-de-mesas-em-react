@@ -43,14 +43,14 @@ const Home: NextPage = () => {
         {!session && (
           <div>
             Sem Sessao <br />
-            <button onClick={signIn}>Sign In</button>
+            <button onClick={() => signOut}>Sign In</button>
           </div>
         )}
         {session && (
           <div>
             Logado com {session.user?.email} <br />
             UwU <br />
-            <button onClick={signOut}>Sair</button>
+            <button onClick={() => signOut}>Sair</button>
           </div>
         )}
       </div>
