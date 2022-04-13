@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import Popup from "reactjs-popup";
 
 function Timer() {
@@ -99,7 +100,7 @@ export function HorarioHud() {
         modal
         nested
       >
-        {(close) => (
+        {(close: MouseEventHandler<HTMLButtonElement> | undefined) => (
           <div className="text-md bg-gray-600 rounded-lg shadow-lg">
             <button
               className="cursor-pointer absolute block p-2 leading-5 right-2 top-2 bg-gray-500 rounded-full hover:scale-105 hover:bg-gray-600 transition shadow-md"
