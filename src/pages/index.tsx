@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         {!session && (
           <div>
             Sem Sessao <br />
-            <button className="bg-gray-800" onClick={signIn}>
+            <button className="bg-gray-800" onClick={() => signIn()}>
               Sign In
             </button>
           </div>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           <div>
             Logado com {session.user?.email} <br />
             UwU <br />
-            <button onClick={signOut}>Sair</button>
+            <button onClick={() => signOut()}>Sair</button>
           </div>
         )}
       </div>

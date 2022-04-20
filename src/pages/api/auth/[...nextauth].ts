@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-// import EmailProvider from "next-auth/providers/email";
+import EmailProvider from "next-auth/providers/email";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
 
@@ -34,16 +34,16 @@ export default NextAuth({
         "660539645218-3njomnurd1ta7f7ml162v8ruq8dl80s7.apps.googleusercontent.com",
       clientSecret: "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",
     }),
-    // EmailProvider({
-    //   server: {
-    //     host: "",
-    //     port: "",
-    //     auth: {
-    //       user: "",
-    //       pass: "",
-    //     },
-    //   },
-    //   from: "",
-    // }),
+    EmailProvider({
+      server: {
+        host: process.env.EMAIL_SERVER_HOST,
+        port: process.env.EMAIL_SERVER_PORT,
+        auth: {
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASSWORD,
+        },
+      },
+      from: process.env.EMAIL_FROM,
+    }),
   ],
 });
