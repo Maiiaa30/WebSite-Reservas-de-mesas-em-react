@@ -1,4 +1,5 @@
 import { Book, Car, Table } from "phosphor-react";
+import Link from "next/link";
 
 export function Buttons() {
   return (
@@ -12,7 +13,9 @@ export function Buttons() {
 
       <div className="pr-8 ">
         <button className="bg-gray-500 text-gray-100 rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-20 transition">
-          <Table size={62} />
+          <Link href={"/ReservarMesa"}>
+            <Table size={62} />
+          </Link>
         </button>
         <div className="text-xl pt-2 font-bold">Reservar Mesa</div>
       </div>

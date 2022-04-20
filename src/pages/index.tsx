@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <SocialLogos />
+
       <div className="text-center mt-9">
         <Image
           height={200}
@@ -37,24 +38,6 @@ const Home: NextPage = () => {
             </button>
           </Link>
         </div>
-      </div>
-
-      <div>
-        {!session && (
-          <div>
-            Sem Sessao <br />
-            <button className="bg-gray-800" onClick={() => signIn()}>
-              Sign In
-            </button>
-          </div>
-        )}
-        {session && (
-          <div>
-            Logado com {session.user?.email} <br />
-            UwU <br />
-            <button onClick={() => signOut()}>Sair</button>
-          </div>
-        )}
       </div>
     </div>
   );
