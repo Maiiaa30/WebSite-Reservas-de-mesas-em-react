@@ -53,7 +53,7 @@ function Timer() {
       mensagem = "Aberto";
       mensagem2 = "18:00 - 02:00";
     } else if (hora < 18) {
-      mensagem = "Fechado";
+      mensagem = "Abre hoje as 18:00";
     }
   } else {
     mensagem = "Fechado";

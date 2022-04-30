@@ -7,6 +7,8 @@ import { SocialLogos } from "../ui/SocialLogos";
 import { Info } from "phosphor-react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { LoginFormPopup } from "../ui/LoginFormPopup";
+import { Rodape } from "../ui/Rodape";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
@@ -39,6 +41,9 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </div>
+
+      <LoginFormPopup />
+      <Rodape />
     </div>
   );
 };
