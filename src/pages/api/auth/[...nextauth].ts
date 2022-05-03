@@ -9,7 +9,6 @@ const prisma = new PrismaClient();
 
 export default NextAuth({
   adapter: PrismaAdapter(prisma),
-  synchronize: false,
   providers: [
     GoogleProvider({
       clientId:

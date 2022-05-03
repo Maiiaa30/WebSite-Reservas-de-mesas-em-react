@@ -111,7 +111,7 @@ export function HorarioHud() {
             <div className="w-full border-b-1 text-center p-5 text-3xl font-bold">
               Horario
             </div>
-            <div className="w-full pt-5 pl-10 pr-10 pb-10 text-lg">
+            <div className="w-full pt-5 pl-16 pr-16 pb-10 text-lg">
               Segunda: Encerrado <br />
               Terça: 10:00 - 15:00, 18:00 - 00:00 <br />
               Quarta: 10:00 - 15:00, 18:00 - 00:00 <br />

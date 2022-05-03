@@ -7,11 +7,10 @@ import { SocialLogos } from "../ui/SocialLogos";
 import { Info } from "phosphor-react";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { LoginFormPopup } from "../ui/LoginFormPopup";
 import { Rodape } from "../ui/Rodape";
 
 const Home: NextPage = () => {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
 
   return (
     <div>
@@ -42,7 +41,6 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <LoginFormPopup />
       <Rodape />
     </div>
   );

@@ -14,7 +14,8 @@ export default function ReservarMesa() {
   const [Numero, setNumero] = useState("");
   const [APIResponse, setAPIResponse] = useState(null);
 
-  const logo = session?.user?.image;
+  // const logo = session?.user?.image;
+  let logo: string = session?.user?.image as const;
 
   useEffect(() => {
     // const fetchData = async () => {
@@ -85,9 +86,9 @@ export default function ReservarMesa() {
 
   const d = new Date();
   var dd = String(d.getDate()).padStart(2, "0");
-  var mm = String(d.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var mm = String(d.getMonth() + 1).padStart(2, "0");
   var yyyy = d.getFullYear();
-  var newmm = String(d.getMonth() + 2).padStart(2, "0"); //January is 0!
+  var newmm = String(d.getMonth() + 2).padStart(2, "0");
   let mesmin = yyyy + "-" + mm + "-" + dd;
   let mesmax = yyyy + "-" + newmm + "-" + dd;
 
@@ -107,9 +108,9 @@ export default function ReservarMesa() {
         <Image
           height={50}
           width={50}
-          src={logo}
+          src={logo} // TODO Fix the host dont like
           priority
-          alt="Logo Da Pessoas"
+          alt="Logo Da Pessoa"
           className="rounded-full"
         />
       </div>
