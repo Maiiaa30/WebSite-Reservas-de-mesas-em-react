@@ -15,7 +15,7 @@ export default async function handler(req: any, res: any) {
   }
 }
 
-async function VerReservas(req, res) {
+async function VerReservas(req: any, res: any) {
   try {
     const reservas = await prisma.reservaDeMesa.findMany();
     return res.status(200).json(reservas, { success: true });
@@ -27,7 +27,7 @@ async function VerReservas(req, res) {
   }
 }
 
-async function Reserva(req, res) {
+async function Reserva(req: any, res: any) {
   const body = req.body;
   try {
     const newEntry = await prisma.reservaDeMesa.create({
