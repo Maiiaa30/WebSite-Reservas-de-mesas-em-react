@@ -15,7 +15,7 @@ export default function ReservarMesa() {
   const [APIResponse, setAPIResponse] = useState(null);
 
   // const logo = session?.user?.image;
-  let logo: string = session?.user?.image as const;
+  let logo: any = session?.user?.image as const;
 
   useEffect(() => {
     // const fetchData = async () => {
