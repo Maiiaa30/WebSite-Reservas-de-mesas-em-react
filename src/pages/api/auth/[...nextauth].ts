@@ -36,4 +36,5 @@ export default NextAuth({
   pages: {
     signIn: "/signin",
   },
+  secret: process.env.FDS_SECRET,
 });
