@@ -11,11 +11,11 @@ import {
   FacebookLoginButton,
 } from "react-social-login-buttons";
 
-export default function SignIn({ providers, csrfToken }) {
+export default function SignIn({ providers }: { providers: any }) {
   return (
     <div>
       <div>
-        {Object.values(providers).map((provider) => {
+        {Object.values(providers).map((provider: any) => {
           console.log(provider);
           if (provider.name === "Email") {
             return;
@@ -40,20 +40,18 @@ export default function SignIn({ providers, csrfToken }) {
   );
 }
 
-SignIn.getInitialProps = async (context: any) => {
-  const { req, res } = context;
-  const session = await getSession({ req });
-
-  if (session && res && session.accessToken) {
-    res.writeHead(302, {
-      location: "/",
-    });
-    res.end();
-    return;
+export async function getServerSideProps(context: NextPageContext) {
+  const session = await getSession({ req: context.req });
+  if (session?.user) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
   }
+  const providers = await getProviders();
   return {
-    session: undefined,
-    providers: await getProviders(context),
-    csrfToken: await getCsrfToken(context),
+    props: { providers },
   };
-};
+}
