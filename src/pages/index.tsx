@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <Buttons />
 
       <div className="flex items-center justify-center">
-        <div className="flex items-center justify-center rounded-lg shadow-md text-center mt-10 bg-gray-700 bg-opacity-10 hover:bg-gray-600 hover:scale-105 hover:transition hover:duration-700">
+        <div className="flex items-center justify-center rounded-lg shadow-md text-center mt-10 bg-base-color bg-opacity-10 hover:bg-base-color2 hover:scale-105 hover:transition hover:duration-700">
           <Link href={"/info/"} passHref>
             <button className="flex font-bold text-lg items-center justify-center w-48 h-9">
               <Info size={24} weight="bold" className="mr-1" />
@@ -41,6 +41,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      <div className="justify-center flex items-center">
+        <hr className="w-96 h-1 bg-black fixed bottom-24 rounded-full" />
+      </div>
       <Rodape />
     </div>
   );
