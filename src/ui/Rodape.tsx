@@ -7,14 +7,14 @@ export function Rodape() {
         <div className="flex justify-center">
           <Phone size={22} weight="bold" />
         </div>
-        911 222 044
+        253 339 321 | 962 371 807
       </div>
 
       <div className="pl-5 font-bold">
         <div className="flex justify-center">
           <MapPinLine size={22} weight="bold" />
         </div>
-        Rua dos carvalhos
+        Av. de Sequeira, 4705-629 Braga
       </div>
     </div>
   );

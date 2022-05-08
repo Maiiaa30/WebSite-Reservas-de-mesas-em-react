@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { SocialLogos } from "../../ui/SocialLogos";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ReservarMesa() {
   const { data: session } = useSession();
@@ -94,17 +95,10 @@ export default function ReservarMesa() {
 
   return (
     <div>
-      <div>
-        Estas logado <br />
-        {session.user?.name}
-        <br />
-        {session.user?.email}
-        <br />
-        <br />
-        {/* {content} */}
-      </div>
-
-      <div>
+      <div className="flex justify-end p-2">
+        <label className="flex justify-center items-center pr-1 capitalize">
+          {session.user?.name}
+        </label>
         <Image
           height={50}
           width={50}
@@ -114,67 +108,77 @@ export default function ReservarMesa() {
           className="rounded-full"
         />
       </div>
-      <div className="text-center">
-        <label htmlFor="reserva-nome">Nome: </label>
-        <input
-          onChange={(e) => setNome(e.target.value)}
-          type="text"
-          className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
-          placeholder="Nome"
-          required
-        />
-        <div className="pt-5">
-          <label htmlFor="reserva-pessoas">Numero de telemovel: </label>
-          <input
-            onChange={(e) => setNumero(e.target.value)}
-            type={"number"}
-            className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
-            placeholder="Numero de pessoas"
-            required
-          />
-        </div>
-        <div className="pt-5">
-          <label htmlFor="reserva-pessoas">Numero de pessoas: </label>
-          <input
-            onChange={(e) => setPessoas(e.target.value)}
-            type={"number"}
-            className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
-            placeholder="Numero de pessoas"
-            required
-          />
-        </div>
-        <div className="pt-5">
-          <label htmlFor="reserva-data">Data: </label>
-          <input
-            onChange={(e) => setData(e.target.value)}
-            type="date"
-            required
-            min={mesmin}
-            max={mesmax}
-            className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
-            // TODO: Colocar um calendario com os dias / ver se esta disponivel esse dia ou nao
-          />
-        </div>
-        <div className="pt-5">
-          <label htmlFor="reserva-hora">Hora: </label>
-          <input
-            required
-            onChange={(e) => setHora(e.target.value)}
-            type={"time"}
-            className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
-            // TODO: Colocar um calendario com os dias / ver se esta disponivel esse dia ou nao
-          />
-        </div>
-        <div className="pt-5">
+      <div className="text-center mt-32 flex flex-col items-center justify-center ">
+        <label htmlFor="" className="font-bold text-2xl pb-2">
+          Reservar Mesa
+        </label>
+        <div className=" flex flex-col bg-white shadow-md px-16 sm:px-6 md:px-8 lg:px-10 py-10 rounded-3xl w-50 max-w-md text-justify">
           <form onSubmit={(e) => handleSubmit(e)}>
-            <button
-              type="submit"
-              className="bg-gray-500 p-2 rounded-lg border-2 border-black text-gray-50 shadow-md"
-            >
-              Reservar
-            </button>
+            <label htmlFor="reserva-nome">Nome: </label>
+            <input
+              onChange={(e) => setNome(e.target.value)}
+              type="text"
+              className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
+              placeholder="Nome"
+              required
+            />
+            <div className="pt-5">
+              <label htmlFor="reserva-pessoas">Numero de telemovel: </label>
+              <input
+                onChange={(e) => setNumero(e.target.value)}
+                type={"number"}
+                className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
+                placeholder="Numero de pessoas"
+                required
+              />
+            </div>
+            <div className="pt-5">
+              <label htmlFor="reserva-pessoas">Numero de pessoas: </label>
+              <input
+                onChange={(e) => setPessoas(e.target.value)}
+                type={"number"}
+                className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
+                placeholder="Numero de pessoas"
+                required
+              />
+            </div>
+            <div className="pt-5">
+              <label htmlFor="reserva-data">Data: </label>
+              <input
+                onChange={(e) => setData(e.target.value)}
+                type="date"
+                required
+                min={mesmin}
+                max={mesmax}
+                className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
+                // TODO: Colocar um calendario com os dias / ver se esta disponivel esse dia ou nao
+              />
+            </div>
+            <div className="pt-5">
+              <label htmlFor="reserva-hora">Hora: </label>
+              <input
+                required
+                onChange={(e) => setHora(e.target.value)}
+                type={"time"}
+                className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
+                // TODO: Colocar um calendario com os dias / ver se esta disponivel esse dia ou nao
+              />
+            </div>
+            <div className="pt-5 text-center">
+              <button
+                type="submit"
+                className="bg-gray-500 hover:bg-gray-700 delay-75 transition p-2 rounded-lg border-2 border-black text-gray-50 shadow-md"
+              >
+                Reservar
+              </button>
+            </div>
           </form>
         </div>
+        <label htmlFor="" className="hover:underline delay-700 pt-2 text-base">
+          <Link href={"/"} passHref>
+            Voltar
+          </Link>
+        </label>
       </div>
     </div>
   );

@@ -8,13 +8,13 @@ export function SocialLogos() {
   return (
     <div className="flex justify-end mt-3 mr-2 ">
       <button className="hover:scale-110 transition mr-1">
-        <Link href="https://google.pt">
+        <Link href="https://pt-pt.facebook.com/Nogueirabar/">
           <FacebookLogo size={39} weight="bold" />
         </Link>
       </button>
 
       <button className="hover:scale-110 transition mr-1">
-        <Link href="https://google.pt">
+        <Link href="https://www.instagram.com/nogueirabar.braga/">
           <InstagramLogo size={39} weight="bold" />
         </Link>
       </button>

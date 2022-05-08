@@ -6,8 +6,6 @@ import {
   getCsrfToken,
   signIn,
 } from "next-auth/react";
-import Link from "next/link";
-import { CaretLeft } from "phosphor-react";
 import {
   GoogleLoginButton,
   FacebookLoginButton,
