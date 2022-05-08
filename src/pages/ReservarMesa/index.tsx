@@ -58,6 +58,7 @@ export default function ReservarMesa() {
       } else {
         resetForm();
         console.log("form submetido com sucesso");
+        alert("Reserva submetida com sucesso");
       }
     } catch (error) {
       console.log("Aconteceu um erro a submeter", error);
@@ -76,7 +77,7 @@ export default function ReservarMesa() {
     return (
       <div>
         <SocialLogos />
-        <div className="text-lg text-center">
+        <div className="text-xl pt-10 text-center font-bold">
           Precisas de estar logado para poderes reservar mesa
         </div>
       </div>
@@ -107,7 +108,7 @@ export default function ReservarMesa() {
         <Image
           height={50}
           width={50}
-          src={logo} // TODO Fix the host dont like
+          src={logo}
           priority
           alt="Logo Da Pessoa"
           className="rounded-full"
@@ -120,6 +121,7 @@ export default function ReservarMesa() {
           type="text"
           className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
           placeholder="Nome"
+          required
         />
         <div className="pt-5">
           <label htmlFor="reserva-pessoas">Numero de telemovel: </label>
@@ -128,6 +130,7 @@ export default function ReservarMesa() {
             type={"number"}
             className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
             placeholder="Numero de pessoas"
+            required
           />
         </div>
         <div className="pt-5">
@@ -137,6 +140,7 @@ export default function ReservarMesa() {
             type={"number"}
             className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
             placeholder="Numero de pessoas"
+            required
           />
         </div>
         <div className="pt-5">
@@ -144,6 +148,7 @@ export default function ReservarMesa() {
           <input
             onChange={(e) => setData(e.target.value)}
             type="date"
+            required
             min={mesmin}
             max={mesmax}
             className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"
@@ -153,6 +158,7 @@ export default function ReservarMesa() {
         <div className="pt-5">
           <label htmlFor="reserva-hora">Hora: </label>
           <input
+            required
             onChange={(e) => setHora(e.target.value)}
             type={"time"}
             className="rounded-lg bg-gray-500 text-gray-50 border-2 border-black p-2 hover:bg-gray-600 hover:transition hover:delay-100 shadow-md"

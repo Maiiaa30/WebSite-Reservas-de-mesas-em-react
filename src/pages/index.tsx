@@ -41,9 +41,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="justify-center flex items-center">
+      {/* <div className="justify-center flex items-center">
         <hr className="w-96 h-1 bg-black fixed bottom-24 rounded-full" />
-      </div>
+      </div> */}
       <Rodape />
     </div>
   );

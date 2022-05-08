@@ -7,23 +7,6 @@ export function SocialLogos() {
 
   return (
     <div className="flex justify-end mt-3 mr-2 ">
-      {!session && (
-        <button
-          className="mr-1 hover:scale-110 transition"
-          onClick={() => signIn()}
-        >
-          <User size={39} weight="bold" />
-        </button>
-      )}
-      {session && (
-        <button
-          onClick={() => signOut()}
-          className="mr-1 hover:scale-110 transition"
-        >
-          <div className="flex justify-center">sair</div>
-          <User size={30} weight="bold" className="flex justify-start" />
-        </button>
-      )}
       <button className="hover:scale-110 transition mr-1">
         <Link href="https://google.pt">
           <FacebookLogo size={39} weight="bold" />
@@ -35,6 +18,37 @@ export function SocialLogos() {
           <InstagramLogo size={39} weight="bold" />
         </Link>
       </button>
+
+      {!session && (
+        <div className="bg-base-color hover:bg-base-color2 hover:duration-300 flex rounded-lg shadow-md">
+          <button
+            className="flex justify-center items-center ml-3 mr-3"
+            onClick={() => signIn()}
+          >
+            <User
+              size={20}
+              weight="bold"
+              className="flex justify-center items-center"
+            />
+            <div className="flex">Entrar</div>
+          </button>
+        </div>
+      )}
+      {session && (
+        <div className="bg-base-color hover:bg-base-color2 hover:duration-300 flex rounded-lg shadow-md">
+          <button
+            className="flex justify-center items-center ml-3 mr-3"
+            onClick={() => signOut()}
+          >
+            <User
+              size={20}
+              weight="bold"
+              className="flex justify-center items-center"
+            />
+            <div className="flex">Sair</div>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
