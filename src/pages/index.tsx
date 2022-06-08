@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     <div>
       <SocialLogos />
 
-      <div className="text-center mt-9">
+      <div className="text-center mt-10 md:mt-9 sm:mt-5">
         <Image
           height={200}
           width={200}
@@ -25,13 +25,13 @@ const Home: NextPage = () => {
           alt="Logo Nogueira Bar"
         />
       </div>
-      <div className="flex items-center justify-center pt-10">
+      <div className="flex items-center justify-center pt-10 md:pt-10 sm:pt-5">
         <HorarioHud />
       </div>
       <Buttons />
 
       <div className="flex items-center justify-center">
-        <div className="flex items-center justify-center rounded-lg shadow-md text-center mt-10 bg-base-color bg-opacity-10 hover:bg-base-color2 hover:scale-105 hover:transition hover:duration-700">
+        <div className="flex items-center justify-center rounded-lg shadow-md text-center mt-10 md:mt-8 sm:mt-5 bg-base-color bg-opacity-10 hover:bg-base-color2 hover:scale-105 hover:transition hover:duration-700">
           <Link href={"/info/"} passHref>
             <button className="flex font-bold text-lg items-center justify-center w-48 h-9">
               <Info size={24} weight="bold" className="mr-1" />

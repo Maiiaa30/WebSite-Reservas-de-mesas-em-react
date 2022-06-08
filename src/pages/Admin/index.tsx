@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
+import { prisma } from "@prisma/client";
 
 export default function AdminPage() {
   const { data: session } = useSession();
@@ -12,7 +12,7 @@ export default function AdminPage() {
     );
   }
 
-  if (session.user?.email === process.env.ADMIN_EMAIL) {
+  if (session.user?.email === "soueuaqui123456789@gmail.com") {
     return (
       <div>
         <div>Admin</div>
