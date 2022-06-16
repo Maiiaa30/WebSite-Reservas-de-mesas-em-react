@@ -1,5 +1,5 @@
 import { useSession } from "next-auth/react";
-import { prisma } from "@prisma/client";
+// import { graphql, useFragment } from "relay-hooks";
 
 export default function AdminPage() {
   const { data: session } = useSession();

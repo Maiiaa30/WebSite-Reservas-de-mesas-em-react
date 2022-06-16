@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import { getSession } from "next-auth/react";
 
 const prisma = new PrismaClient();
 
@@ -26,6 +25,10 @@ async function VerReservas(req: any, res: any) {
       .json({ error: "Erro a ler da database", success: false });
   }
 }
+
+const d = new Date();
+var dd = String(d.getDate()).padStart(2, "0");
+var hh = String(d.getHours());
 
 async function Reserva(req: any, res: any) {
   const body = req.body;

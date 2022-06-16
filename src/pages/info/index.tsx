@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             <MapPinLine size={22} weight="bold" />
           </div>
           <div className="flex pl-4 justify-center items-center">
-            Rua dos carvalhos
+            Av. de Sequeira, 4705-629 Braga
           </div>
         </div>
 
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             <Phone size={22} weight="bold" />
           </div>
           <div className="flex pl-4 justify-center items-center">
-            911 222 044
+            253 339 321 | 962 371 807
           </div>
         </div>
 

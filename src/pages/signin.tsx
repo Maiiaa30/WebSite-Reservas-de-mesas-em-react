@@ -6,6 +6,7 @@ import {
   getCsrfToken,
   signIn,
 } from "next-auth/react";
+import Link from "next/link";
 import {
   GoogleLoginButton,
   FacebookLoginButton,
@@ -56,6 +57,11 @@ export default function SignIn({ providers }: { providers: any }) {
             </div>
           </div>
         </div>
+        <label htmlFor="" className="hover:underline delay-700 pt-2 text-base">
+          <Link href={"/"} passHref>
+            Voltar
+          </Link>
+        </label>
       </div>
     </div>
   );

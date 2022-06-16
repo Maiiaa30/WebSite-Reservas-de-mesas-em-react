@@ -26,8 +26,10 @@
     "react-inner-image-zoom": "^3.0.1",
     "react-medium-image-zoom": "^4.4.3",
     "react-photo-view": "^1.2.0",
+    "react-relay": "^14.0.0",
     "react-social-login-buttons": "^3.6.0",
-    "reactjs-popup": "^2.0.5"
+    "reactjs-popup": "^2.0.5",
+    "relay-hooks": "^7.1.0"
   },
   "devDependencies": {
     "@types/node": "17.0.23",
