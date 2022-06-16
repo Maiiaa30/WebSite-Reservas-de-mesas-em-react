@@ -23,7 +23,9 @@
     "react-hooks-use-modal": "^2.1.0",
     "react-image-gallery": "^1.2.8",
     "react-image-lightbox": "^5.1.4",
-    "react-medium-image-zoom": "^4.3.7",
+    "react-inner-image-zoom": "^3.0.1",
+    "react-medium-image-zoom": "^4.4.3",
+    "react-photo-view": "^1.2.0",
     "react-social-login-buttons": "^3.6.0",
     "reactjs-popup": "^2.0.5"
   },
@@ -31,6 +33,7 @@
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
     "@types/react-dom": "17.0.14",
+    "@types/react-inner-image-zoom": "^3.0.0",
     "autoprefixer": "^10.4.4",
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "eslint": "^8.13.0",
