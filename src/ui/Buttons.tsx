@@ -1,9 +1,9 @@
-import { Book, Car, Table } from "phosphor-react";
+import { Book, Table } from "phosphor-react";
 import Link from "next/link";
 
 export function Buttons() {
   return (
-    <div className="flex justify-center text-center md:pt-10 sm:5">
+    <div className="flex justify-center text-center md:pt-10 pt-8 sm:5">
       {/* <div className="pr-8">
         <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
           <Car size={62} />
@@ -14,16 +14,16 @@ export function Buttons() {
       <div className="pr-8">
         <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
           <Link href={"/ReservarMesa"}>
-            <Table size={62} />
+            <Table size={55} />
           </Link>
         </button>
-        <div className="text-xl pt-2 font-bold">Reservar Mesa</div>
+        <div className="text-xl pt-2 font-bold">Horario</div>
       </div>
 
       <div>
         <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
           <Link href={"/Menu"}>
-            <Book size={62} />
+            <Book size={55} />
           </Link>
         </button>
         <div className="text-xl pt-2 font-bold">Ver Menu</div>

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     <div>
       <SocialLogos />
 
-      <div className="text-center mt-10 md:mt-9 sm:mt-5">
+      <div className="text-center mt-8 md:mt-9 sm:mt-5">
         <Image
           height={200}
           width={200}

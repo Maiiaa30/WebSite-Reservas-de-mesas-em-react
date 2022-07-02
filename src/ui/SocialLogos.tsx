@@ -19,7 +19,7 @@ export function SocialLogos() {
         </Link>
       </button>
 
-      {!session && (
+      {/* {!session && (
         <div className="bg-base-color hover:bg-base-color2 hover:duration-300 flex rounded-lg shadow-md">
           <button
             className="flex justify-center items-center ml-3 mr-3"
@@ -48,7 +48,7 @@ export function SocialLogos() {
             <div className="flex">Sair</div>
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

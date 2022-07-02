@@ -2,7 +2,8 @@ import { Phone, MapPinLine } from "phosphor-react";
 
 export function Rodape() {
   return (
-    <div className="fixed bottom-5 w-full flex justify-center text-center">
+    // <div className="bottom-1 w-full flex justify-center text-center">
+    <div className="flex justify-center text-center pt-14 bottom-0">
       <div className="font-bold">
         <div className="flex justify-center">
           <Phone size={22} weight="bold" />

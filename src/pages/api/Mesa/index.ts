@@ -48,3 +48,12 @@ async function Reserva(req: any, res: any) {
     res.status(500).json({ error: "Erro a reservar mesa", success: false });
   }
 }
+
+export async function getServerSideProps() {
+  const reservasMesa = await prisma.reservaDeMesa.findMany();
+  return {
+    props: {
+      foods: reservasMesa,
+    },
+  };
+}
