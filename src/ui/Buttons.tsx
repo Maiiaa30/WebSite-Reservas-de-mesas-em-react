@@ -13,9 +13,7 @@ export function Buttons() {
 
       <div className="pr-8">
         <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
-          <Link href={"/ReservarMesa"}>
-            <Table size={55} />
-          </Link>
+          <Table size={55} />
         </button>
         <div className="text-xl pt-2 font-bold">Horario</div>
       </div>
