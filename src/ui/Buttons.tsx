@@ -11,13 +11,6 @@ export function Buttons() {
         <div className="text-xl pt-2 font-bold">Encomendar</div>
       </div> */}
 
-      <div className="pr-8">
-        <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
-          <Table size={55} />
-        </button>
-        <div className="text-xl pt-2 font-bold">Horario</div>
-      </div>
-
       <div>
         <button className="bg-base-color rounded-full p-5 bg-opacity-10 shadow-md hover:bg-opacity-50 transition">
           <Link href={"/Menu"}>
